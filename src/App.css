@@ -85,11 +85,12 @@ body {
 .flash-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 150px 150px 150px;
-  gap: 10px;
+  grid-template-rows: 250px 250px;
+  padding: 40px;
+  gap: 40px;
 }
 .flash-cards div {
-	display: flex;
+  display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;

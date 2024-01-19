@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 
 const questions = [
   {
@@ -43,10 +44,12 @@ function App() {
 }
 
 function FlashCards() {
+  const [selectedId, setSelectedId] = useState();
+
   return (
     <div className="flash-cards">
       {questions.map((q) => (
-        <div>{q.question}</div>
+        <div key={q.id}>{q.question}</div>
       ))}
     </div>
   );
