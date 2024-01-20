@@ -89,6 +89,7 @@ body {
   padding: 40px;
   gap: 40px;
 }
+
 .flash-cards div {
   display: flex;
   align-items: center;
@@ -96,4 +97,9 @@ body {
   justify-content: center;
   background-color: #cfc8c8;
   border-radius: 7px;
+}
+
+div.selected {
+  background-color: #bc1a1a;
+  color: white;
 }

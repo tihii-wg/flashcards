@@ -44,12 +44,24 @@ function App() {
 }
 
 function FlashCards() {
-  const [selectedId, setSelectedId] = useState();
+  const [selectedId, setSelectedId] = useState(null);
+
+  const onClickHandler = (id) => {
+    selectedId !== id ? setSelectedId(id) : setSelectedId(null);
+  };
 
   return (
     <div className="flash-cards">
       {questions.map((q) => (
-        <div key={q.id}>{q.question}</div>
+        <div
+          className={q.id === selectedId ? "selected" : ""}
+          key={q.id}
+          onClick={() => {
+            onClickHandler(q.id);
+          }}
+        >
+          {selectedId === q.id ? q.answer : q.question}
+        </div>
       ))}
     </div>
   );
